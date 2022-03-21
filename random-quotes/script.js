@@ -21,7 +21,7 @@ let currentQuote = '',
 
 function getQuotes() {
 
-  return $.ajax({
+  return $.ajax({ //all the magic of this app happens with $.ajax()
     headers: {
       Accept: 'application/json'
     },
@@ -40,8 +40,8 @@ function getQuotes() {
   });
 }
 
-function getRandomQuote() {
-  return quotesData.quotes[
+function getRandomQuote() { //this is where the random selection process happens
+  return quotesData.quotes[ //jsonQuotes = parsed data from json string; "quotes" key from object(parsed data); [index]
     Math.floor(Math.random() * quotesData.quotes.length)
   ];
 }
@@ -52,7 +52,7 @@ function getQuote() {
   currentQuote = randomQuote.quote;
   currentAuthor = randomQuote.author;
 
-  $('#tweet-quote').attr( //Tweet quote
+  $('#tweet-quote').attr( //Tweet intent
     'href',
     'https://twitter.com/intent/tweet'
     //  + encodeURIComponent('"' + currentQuote + '" ' + currentAuthor)
