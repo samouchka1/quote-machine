@@ -72,7 +72,7 @@ function getQuote() {
 
   // const color = Math.floor(Math.random() * colors.length);
 
-  // $('html body').animate({
+  // $('#quote-box').animate({
   //     backgroundColor: colors[color],
   //     color: colors[color]
   //   },
